@@ -9,7 +9,7 @@ const Register=()=> {
           <h2 className="text-2xl font-bold mb-8 border-l-4 border-pink-500 pl-3">Dummy data</h2>   
           <div>
           <img
-                  src="" alt=""
+                  src="https://plus.unsplash.com/premium_photo-1661340622801-6e19ab613b2f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D" alt=""
                   className="w-[600px] h-[400px]  object-cover mb-4"
                 />
           </div>
