@@ -6,8 +6,14 @@ const App = () => {
   return (
      
       <Routes>
-        <Route path="/" element={<Home />} />
         
+        <Route path="/" element={<Home />} />
+        <Route path='/login'></Route>
+        <Route path='/register'></Route>
+        <Route path='/events'></Route>
+        <Route path='/createevent'></Route>
+        <Route path='/eventdetails'></Route>
+        <Route path='/userprofile'></Route>
       </Routes>
     
   );

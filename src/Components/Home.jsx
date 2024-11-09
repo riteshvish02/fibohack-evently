@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Partials/Nav";
-import SecondPage from "./SecondPage";
-import EventList from "./EventList";
+import SecondPage from "./Partials/Home/SecondPage";
+import EventList from "./Partials/Home/EventList";
  
 
 const Home = () => {
