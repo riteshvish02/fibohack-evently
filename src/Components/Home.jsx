@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./Partials/Nav";
 import SecondPage from "./SecondPage";
+import EventList from "./EventList";
  
 
 const Home = () => {
@@ -83,6 +84,9 @@ const Home = () => {
     </div>
     <div className="pt-4 lg:w-full w-full min-h-screen bg-[#F4F7FC]">
       <SecondPage/>
+    </div>
+    <div className="pt-4 lg:w-full w-full min-h-screen bg-[#F4F7FC]">
+      <EventList/>
     </div>
      
     </div>
