@@ -35,7 +35,7 @@ function  EventList() {
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold">Trusted by Thousands of Events</h1>
+      <h1 className="text-5xl font-[ppbold] mb-8 font-bold">Trusted by Thousands of Events</h1>
       <div className="flex items-center space-x-4 mt-4">
         <input
           type="text"
