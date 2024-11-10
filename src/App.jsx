@@ -6,6 +6,7 @@ import Userdeshboard from "./Components/Userdeshboard"
 import Login from './Components/Login';
 import CreateAccount from './Components/CreateAccount';
 import CreateEvent from './Components/CreateEvent';
+import FindEvent from './Components/FindEvent';
 const App = () => {
   return (
      
@@ -14,7 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/createaccount' element={<CreateAccount/>}></Route>
-        <Route path='/events'></Route>
+        <Route path='/events' element={<FindEvent/>}></Route>
         <Route path='/createevent' element={<CreateEvent/>}></Route>
         <Route path='/eventdetails' element={<Eventdets/>}></Route>
         <Route path='/userprofile' element={<Userdeshboard/>}></Route>
