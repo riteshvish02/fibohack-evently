@@ -3,6 +3,7 @@ import Nav from "./Partials/Nav";
 import SecondPage from "./Partials/Home/SecondPage";
 import EventList from "./Partials/Home/EventList";
 import Faq from "./Partials/Home/Faq";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -92,7 +93,7 @@ const Home = () => {
       <div className="pt-4 lg:w-full w-full min-h-screen bg-[#F4F7FC]">
         <Faq />
       </div>
-
+            <Footer/>
 
     </div>
   );
