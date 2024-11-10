@@ -18,8 +18,8 @@ const Home = () => {
 
         {/* Content Section */}
         <div className="relative z-10 w-2/4  flex items-start justify-center flex-col ml-24 ">
-          <h1 className="text-6xl font-[ppbold] font-bold text-black mb-4">
-            Host, Connect, <br /> Celebrate: Your <br /> Events, Our Platform!
+          <h1 className="text-6xl font-[ppbold] w-[93%] font-bold text-black mb-4">
+            Host, Connect,  Celebrate: Your  Events, Our Platform!
           </h1>
           <p className="text-gray-700 mt-6 mb-6 font-semibold text-lg">
             Book and learn helpful tips from 3,168+ mentors in <br /> world-class companies with our global community.

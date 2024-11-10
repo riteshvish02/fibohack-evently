@@ -32,9 +32,10 @@ const Register=()=> {
               <h2 className="text-xl font-bold mb-4">Registration</h2>
               <hr className="mb-2"/>
               <p className="mb-4 text-lg text-zinc-600">Hello! To join the event, please register below.</p>
-              <button className="w-full py-2 text-white bg-[#F02E65] rounded-md hover:bg-[#990E3C]">
-                Register
-              </button>
+              <button className="w-full py-2 mt-4 text-white bg-gradient-to-r from-[#9f7ff9] to-[#8b62fc] rounded-md hover:from-[#8b62fc] hover:to-[#A485F9]">
+  Register
+</button>
+
             </section>
 
          <div className="bg-[#F4F1F9] ">
@@ -89,9 +90,10 @@ const Register=()=> {
 
               <div>
                 <p className="mt-2 text-xl text-[#374151] font-bold">Aditya</p>
-                <button className="w-full py-2 mt-4 text-white bg-[#F02E65] rounded-md hover:bg-[#990E3C]">
-                  Contact
-                </button>
+                <button className="w-full py-2 mt-4 text-white bg-gradient-to-r from-[#9f7ff9] to-[#8b62fc] rounded-md hover:from-[#8b62fc] hover:to-[#A485F9]">
+  Contact
+</button>
+
               </div>
             </section>
           </div>
