@@ -10,39 +10,39 @@ const Faq = () => {
   return (
     <div className="max-w-3xl min-w-[320px] mx-auto px-6 md:px-12 py-8">
       <h1 className="text-2xl mb-[10%] font-[ppbold]  md:text-3xl text-center">Frequently Asked Questions</h1>
-      <div className="mt-4  ">
+      <div className="mt-4">
         <AccordionItem
           index={1}
-          title="What is SEO, and why is it important for online businesses?"
-          description="SEO, or Search Engine Optimization, is the practice of optimizing a website to improve its visibility on search engines like Google. It involves various techniques to enhance a site's ranking in search results. SEO is crucial for online businesses as it helps drive organic traffic, increases visibility, and ultimately leads to higher conversions."
+          title="What types of events can I find on this platform?"
+          description="You can discover a wide variety of local events, including festivals, concerts, workshops, sports events, community gatherings, and more. Our goal is to provide a space for all types of events that promote community engagement and fun!"
           activeIndex={activeIndex}
           toggleAccordion={toggleAccordion}
         />
         <AccordionItem
           index={2}
-          title="How long does it take to see results from SEO efforts?"
-          description="The timeline for seeing results from SEO can vary based on several factors, such as the competitiveness of keywords, the current state of the website, and the effectiveness of the SEO strategy. Generally, it may take several weeks to months before noticeable improvements occur. However, long-term commitment to SEO is essential for sustained success."
+          title="How can I add or promote my own event on the platform?"
+          description="Once you’ve created an account, you can easily add your event by navigating to the 'Add Event' section, where you’ll enter details like date, location, description, and images. Your event will then be visible to all users, allowing the community to engage and RSVP."
           activeIndex={activeIndex}
           toggleAccordion={toggleAccordion}
         />
         <AccordionItem
           index={3}
-          title="What are the key components of a successful SEO strategy?"
-          description="A successful SEO strategy involves various components, including keyword research, on-page optimization, quality content creation, link building, technical SEO, and user experience optimization. These elements work together to improve a website's relevance and authority in the eyes of search engines."
+          title="Is there a way to RSVP or show interest in an event?"
+          description="Yes, each event page includes an RSVP button. Simply click 'RSVP' to confirm your attendance or interest in the event. You can also see the list of other users who have RSVP’d, which helps in gauging the event’s popularity."
           activeIndex={activeIndex}
           toggleAccordion={toggleAccordion}
         />
         <AccordionItem
           index={4}
-          title="How does mobile optimization impact SEO?"
-          description="Mobile optimization is crucial for SEO because search engines prioritize mobile-friendly websites. With the increasing use of smartphones, search engines like Google consider mobile responsiveness as a ranking factor. Websites that provide a seamless experience on mobile devices are more likely to rank higher in search results."
+          title="Can I share events on social media from this platform?"
+          description="Absolutely! We provide built-in social media sharing options so you can share any event directly to platforms like Facebook, Twitter, and Instagram. Sharing events can help spread the word and increase participation from your friends and community."
           activeIndex={activeIndex}
           toggleAccordion={toggleAccordion}
         />
         <AccordionItem
           index={5}
-          title="What is the role of backlinks in SEO, and how can they be acquired?"
-          description="Backlinks, or inbound links from other websites to yours, play a significant role in SEO. They are considered a vote of confidence and can improve a site's authority. Quality over quantity is crucial when acquiring backlinks. Strategies for obtaining backlinks include creating high-quality content, guest posting, reaching out to industry influencers, and participating in community activities. It's important to focus on natural and ethical link-building practices."
+          title="Is there a way to receive notifications or updates about events I’m interested in?"
+          description="Yes, when you RSVP to an event, you’ll have the option to enable notifications for updates. This way, you’ll be informed about any changes, reminders, or announcements related to the events you're following."
           activeIndex={activeIndex}
           toggleAccordion={toggleAccordion}
         />
