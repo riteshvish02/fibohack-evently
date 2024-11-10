@@ -1,75 +1,73 @@
 'use client'
 
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: ''
-  })
+  });
 
-  const [errors, setErrors] = useState({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Form validation
   const validateForm = () => {
-    let formErrors = {}
+    let formErrors = {};
 
     if (!formData.name.trim()) {
-      formErrors.name = 'Name is required'
+      formErrors.name = 'Name is required';
     }
 
     if (!formData.email) {
-      formErrors.email = 'Email is required'
+      formErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = 'Email address is invalid'
+      formErrors.email = 'Email address is invalid';
     }
 
     if (!formData.password) {
-      formErrors.password = 'Password is required'
+      formErrors.password = 'Password is required';
     } else if (formData.password.length < 8) {
-      formErrors.password = 'Password must be at least 8 characters'
+      formErrors.password = 'Password must be at least 8 characters';
     }
 
-    return formErrors
-  }
+    return formErrors;
+  };
 
   // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const validationErrors = validateForm()
+    const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors)
+      setErrors(validationErrors);
     } else {
-      setErrors({})
-      setIsSubmitting(true)
+      setErrors({});
+      setIsSubmitting(true);
       
       // Simulate API call (replace this with actual signup logic)
       setTimeout(() => {
-        alert('Account created successfully!')
-        setIsSubmitting(false)
-      }, 2000)
+        alert('Account created successfully!');
+        setIsSubmitting(false);
+      }, 2000);
     }
-  }
+  };
 
   // Handle input change
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       {/* Left Section */}
       <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col">
-       
-
         <div className="max-w-md mx-auto w-full">
-          <h1 className="text-3xl font-bold mb-2">Login Acoount</h1>
-          <p className="text-gray-600 mb-8">Start your 30 day free trial</p>
+          <h1 className="text-3xl font-[ppbold] font-bold mb-2">Login Account</h1>
+          <p className="text-gray-600 mb-8">Start your 30-day free trial</p>
 
           <button
             className="w-full mb-8 flex items-center justify-center gap-2 border rounded-lg p-3 hover:bg-gray-50 transition-colors"
@@ -92,7 +90,7 @@ const Login = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="What shall we call you?"
-                className={`w-full p-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`w-full p-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#9a7bf0]`}
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
@@ -105,7 +103,7 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="you@domain.com"
-                className={`w-full p-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`w-full p-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#9a7bf0]`}
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
@@ -118,7 +116,7 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="••••••••"
-                className={`w-full p-3 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                className={`w-full p-3 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#9a7bf0]`}
               />
               {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
               <p className="mt-2 text-sm text-gray-500">Must be at least 8 characters</p>
@@ -126,16 +124,16 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full  text-white bg-gradient-to-r from-[#9a7bf0] to-[#8b62fc] rounded-lg p-3 hover:bg-gradient-to-r from-[#8b62fc] to-[#703dfd] transition-colors disabled:opacity-50"
+              className="w-full text-white bg-gradient-to-r from-[#9a7bf0] to-[#8b62fc] rounded-lg p-3 hover:from-[#8b62fc] hover:to-[#703dfd] transition-colors duration-300 disabled:opacity-50"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Logging account...' : 'Login account'}
+              {isSubmitting ? 'Logging in...' : 'Login'}
             </button>
           </form>
 
           <p className="mt-6 text-center text-gray-600">
-            Don`t have an Account?{' '}
-            <Link to='/register' className="text-[#8b62fc] hover:underline">
+            Don’t have an account?{' '}
+            <Link to='/createaccount' className="text-[#8b62fc] hover:underline">
               Register
             </Link>
           </p>
@@ -158,28 +156,17 @@ const Login = () => {
               <path d="M12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
               <path d="M20 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
               <path d="M4 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-              <path d="M4 20a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+              <path d="M12 20a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
             </svg>
           </div>
-
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Save thousands of design hours
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Join thousands of designers and mockup high-quality landing pages in minutes.
+          <h2 className="text-2xl font-[ppbold] font-semibold mb-4">FissionX</h2>
+          <p className="text-lg text-gray-600">
+            Sign up today to unlock all the features. Let's get you started on your new journey with us.
           </p>
-
-          <div className="flex items-center gap-2">
-            <div className="flex -space-x-2">
-              {/* Placeholder for avatars */}
-              <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-200" />
-            </div>
-            <span className="text-sm text-gray-600">Join 60,000+ users</span>
-          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import Eventdets from './Components/Eventdets';
 import Userdeshboard from "./Components/Userdeshboard"
 import Login from './Components/Login';
+import CreateAccount from './Components/CreateAccount';
 const App = () => {
   return (
      
@@ -11,7 +12,7 @@ const App = () => {
         
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login/>}></Route>
-        <Route path='/register'></Route>
+        <Route path='/createaccount' element={<CreateAccount/>}></Route>
         <Route path='/events'></Route>
         <Route path='/createevent'></Route>
         <Route path='/eventdetails' element={<Eventdets/>}></Route>
