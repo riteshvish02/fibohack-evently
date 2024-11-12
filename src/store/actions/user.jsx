@@ -33,3 +33,13 @@ export const isUser = ()=>async(dispatch)=>{
         dispatch(isErrorAuth(error.response.data))
     }
 }
+
+export const logoutUser = ()=>async(dispatch)=>{
+    dispatch(isLoadingAuth())
+    try {
+        await axios.get("/user/logout");
+        dispatch(userLogoutSuccess())
+    } catch (error) {
+        dispatch(isErrorAuth(error.response.data))
+    }
+}

@@ -1,11 +1,16 @@
 'use client'
 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import {isUser,loginUser} from "../store/actions/user"
+import { useDispatch, useSelector } from 'react-redux';
+import {clearError,clearMsg,clearMsgAuth,clearErrorAuth} from "../store/reducers/userSlice"
+import { toast } from 'react-toastify';
 const Login = () => {
+  const user = useSelector(state=>state.User)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: ''
   });
@@ -17,9 +22,9 @@ const Login = () => {
   const validateForm = () => {
     let formErrors = {};
 
-    if (!formData.name.trim()) {
-      formErrors.name = 'Name is required';
-    }
+    // if (!formData.name.trim()) {
+    //   formErrors.name = 'Name is required';
+    // }
 
     if (!formData.email) {
       formErrors.email = 'Email is required';
@@ -29,8 +34,8 @@ const Login = () => {
 
     if (!formData.password) {
       formErrors.password = 'Password is required';
-    } else if (formData.password.length < 8) {
-      formErrors.password = 'Password must be at least 8 characters';
+    } else if (formData.password.length < 0) {
+      formErrors.password = 'Password must be at least 3 characters';
     }
 
     return formErrors;
@@ -46,12 +51,7 @@ const Login = () => {
     } else {
       setErrors({});
       setIsSubmitting(true);
-      
-      // Simulate API call (replace this with actual signup logic)
-      setTimeout(() => {
-        alert('Account created successfully!');
-        setIsSubmitting(false);
-      }, 2000);
+      dispatch(loginUser(formData)) 
     }
   };
 
@@ -60,7 +60,27 @@ const Login = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  useEffect(()=>{
+   
+    if(user.messageAuth){
+      toast.success("user created successfully");
+      dispatch(clearMsgAuth())
+    }
+    if(user.isAuthenticated){
+      toast.success("user logged in successfully");
+    }
+    if(user.errorAuth){
+      toast.error(user.errorAuth);
+      dispatch(clearErrorAuth())
+    }
+    if(!user.loading){
+      if(user.isAuthenticated){
+        console.log(dispatch(isUser()));
+        dispatch(isUser())
+        navigate('/userprofile');
+      }
+    }
+  },[user.messageAuth,user.errorAuth,dispatch])
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       {/* Left Section */}
@@ -82,7 +102,7 @@ const Login = () => {
           </button>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium mb-2">Name</label>
               <input
                 type="text"
@@ -93,7 +113,7 @@ const Login = () => {
                 className={`w-full p-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-[#9a7bf0]`}
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-sm font-medium mb-2">Email address</label>
@@ -125,7 +145,7 @@ const Login = () => {
             <button
               type="submit"
               className="w-full text-white bg-gradient-to-r from-[#9a7bf0] to-[#8b62fc] rounded-lg p-3 hover:from-[#8b62fc] hover:to-[#703dfd] transition-colors duration-300 disabled:opacity-50"
-              disabled={isSubmitting}
+              // disabled={isSubmitting}
             >
               {isSubmitting ? 'Logging in...' : 'Login'}
             </button>

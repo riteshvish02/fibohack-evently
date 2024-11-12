@@ -110,8 +110,6 @@ const UserRegister = () => {
       if(user.isAuthenticated){
         dispatch(isUser())
         navigate('/events');
-      }else{
-        navigate('/createaccount');
       }
     }
   },[user.messageAuth,user.errorAuth,dispatch])
