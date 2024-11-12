@@ -85,7 +85,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 🤝 Support
 
-For support, email [your-email@example.com] or open an issue in the repository.
+For support, email [rv504263@gmail.com] or open an issue in the repository.
 
 ## 🔮 Future Enhancements
 
@@ -97,8 +97,13 @@ For support, email [your-email@example.com] or open an issue in the repository.
 - Mobile application
 
 ## 📸 Screenshots
+### Home Page
+![Home Page](public/images/image.png)
 
-[Add screenshots of your application here]
+### Event Creation
+![Create Event](./screenshots/create-event.png)
+
+
 
 ## ✨ Acknowledgments
 
