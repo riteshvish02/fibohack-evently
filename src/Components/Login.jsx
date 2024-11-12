@@ -140,7 +140,7 @@ const Login = () => {
         </div>
 
         <div className="mt-auto pt-8 flex items-center justify-between text-sm text-gray-500">
-          <p>© 2024 FissionX</p>
+          <p>© 2024 FussionX</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-gray-700">Terms</a>
             <a href="#" className="hover:text-gray-700">Privacy</a>
@@ -159,7 +159,8 @@ const Login = () => {
               <path d="M12 20a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-[ppbold] font-semibold mb-4">FissionX</h2>
+          <h1 className="text-6xl font-[ppbold] text-[#916CF8] font-semibold mb-4">Welcome to evently</h1>
+          <h2 className="text-5xl font-[ppbold] font-semibold mb-4">FussionX</h2>
           <p className="text-lg text-gray-600">
             Sign up today to unlock all the features. Let's get you started on your new journey with us.
           </p>
