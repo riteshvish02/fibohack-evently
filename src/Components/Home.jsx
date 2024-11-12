@@ -89,7 +89,7 @@ const Home = () => {
       <div className="pt-4 w-full min-h-screen bg-[#F4F7FC]">
         <EventList />
       </div>
-      <div className="pt-4 w-full min-h-screen bg-[#F4F7FC]">
+      <div className="pt-4 w-full max-md:h-[70vh] lg:min-h-screen bg-[#F4F7FC]">
         <Faq />
       </div>
       <Footer />
