@@ -6,36 +6,34 @@ import Faq from "./Partials/Home/Faq";
 import Footer from "./Footer";
 import { toast } from "react-toastify";
 
-
 const Home = () => {
-  useEffect(()=>{
+  useEffect(() => {
     toast.success("Welcome to Evently! Enjoy your stay", {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
     });
-  },[])
+  }, []);
+
   return (
-    <div className="min-h-screen overflow-x-hidden  relative">
-
-
-      <div className="relative w-full min-h-screen flex justify-between items-center">
+    <div className="min-h-screen overflow-x-hidden relative">
+      <div className="relative w-full min-h-screen flex flex-col lg:flex-row   justify-between items-center">
         <Nav />
 
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-purple-200 via-purple-50 to-white clip-hero"></div>
 
         {/* Content Section */}
-        <div className="relative z-10 w-2/4  flex items-start justify-center flex-col ml-24 ">
-          <h1 className="text-6xl font-[ppbold] w-[93%] font-bold text-black mb-4">
-            Host, Connect,  Celebrate: Your  Events, Our Platform!
+        <div className="relative    z-10 w-full lg:w-2/4  flex items-start justify-center flex-col lg:ml-24 p-6 lg:p-0">
+          <h1 className="text-4xl   mt-20 lg:text-6xl font-[ppbold] font-bold text-black mb-4 w-full   lg:w-[93%]">
+            Host, Connect, Celebrate: Your Events, Our Platform!
           </h1>
-          <p className="text-gray-700 mt-6 mb-6 font-semibold text-lg">
-            Book and learn helpful tips from 3,168+ mentors in <br /> world-class companies with our global community.
+          <p className="text-gray-700 mt-4 mb-4 lg:mt-6 lg:mb-6 font-semibold text-base lg:text-lg">
+            Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.
           </p>
           <button
             className="px-6 py-3 rounded-full text-white font-semibold transition-all duration-300 transform hover:shadow-lg hover:brightness-110"
@@ -45,68 +43,56 @@ const Home = () => {
           >
             Explore Now
           </button>
-
-
-
         </div>
 
         {/* Image Grid */}
-        <div className=" relative  pl-20 gap-3 z-10 w-1/2">
-          {/* Image 1 */}
-          <div className="flex  m-3 gap-5">
-            <div className="w-[45%] h-40 mr-5 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1588952924055-cca185a87ab5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5Mnx8fGVufDB8fHx8fA%3D%3D" alt="Event 1" className="object-cover w-full h-full" />
+        <div className="relative w-full lg:w-1/2 flex flex-col gap-3 z-10 p-6 lg:pl-20">
+          {/* Image Row 1 */}
+          <div className="flex flex-wrap lg:flex-nowrap gap-3">
+            <div className="w-[45%] h-40 rounded-xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581090581500-58b180d1f0fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8" alt="" />
             </div>
-
-            {/* Image 2 */}
-            <div className="  w-40 h-40 rounded-full overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1730112635879-86d3e9072e8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3NXx8fGVufDB8fHx8fA%3D%3D" alt="Event 2" className="object-cover w-full h-full" />
+            <div className="w-[45%] h-40 rounded-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1520583457224-aee11bad5112?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZSUyMGFuZCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D" alt="" />
             </div>
           </div>
 
-          <div className="flex m-3 gap-5">
-            {/* Image 3 */}
-            <div className="  w-40 h-40 mr-5 rounded-full  overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1727106281849-eb20141db354?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2Nnx8fGVufDB8fHx8fA%3D%3D" alt="Event 3" className="object-cover w-full h-full" />
+          {/* Image Row 2 */}
+          <div className="flex flex-wrap lg:flex-nowrap gap-3">
+            <div className="w-[45%] h-40 rounded-full overflow-hidden">
+              <img src="https://i.pinimg.com/236x/3e/f3/7b/3ef37b6667a660805ef9bb7869312e1d.jpg" alt="" />
             </div>
-
-            {/* Image 4 */}
-            <div className=" w-[45%] h-40 rounded-xl  overflow-hidden">
-              <img src="https://plus.unsplash.com/premium_photo-1664382465641-997aa3b73907?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2NHx8fGVufDB8fHx8fA%3D%3D" alt="Event 4" className="object-cover w-full h-full" />
+            <div className="w-[45%] h-40 rounded-xl overflow-hidden">
+              <img src="https://i.pinimg.com/564x/4c/49/33/4c493380c52f6bf51226acb1b86904d0.jpg" alt="" />
             </div>
           </div>
 
-          {/* Image 5 */}
-          <div className="flex gap-2">
-            <div className=" w-48 h-48  rounded-full overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1730871082254-65b6e151c82b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2M3x8fGVufDB8fHx8fA%3D%3D" alt="Event 5" className="object-cover w-full h-full" />
+          {/* Image Row 3 */}
+          <div className="flex flex-wrap lg:flex-nowrap gap-3">
+            <div className="w-[30%] h-48 rounded-full overflow-hidden">
+              <img src="https://i.pinimg.com/236x/2d/99/f8/2d99f85cb8c10b9daa74f7730d348c7a.jpg" alt="" />
             </div>
-
-            {/* Image 6 */}
-            <div className=" w-[25%] h-48 rounded-full overflow-hidden">
-              <img src="https://plus.unsplash.com/premium_photo-1712029146082-3faa70d0144c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MHx8fGVufDB8fHx8fA%3D%3D" alt="Event 6" className="object-cover w-full h-full" />
+            <div className="w-[30%] h-48 rounded-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8" alt="Event 6" className="object-cover w-full h-full" />
             </div>
-
-            <div className=" w-[25%] h-48 rounded-full overflow-hidden">
-              <img src="https://plus.unsplash.com/premium_photo-1712029146082-3faa70d0144c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MHx8fGVufDB8fHx8fA%3D%3D" alt="Event 6" className="object-cover w-full h-full" />
+            <div className="w-[30%] h-48 rounded-full overflow-hidden">
+              <img className="mt-10" src="https://i.pinimg.com/236x/e8/62/0d/e8620d5364138fe60785cadcc95d7270.jpg" alt="" />
             </div>
           </div>
         </div>
-
-
-
       </div>
-      <div className="pt-4 lg:w-full w-full min-h-screen bg-[#F4F7FC]">
+
+      {/* Other Sections */}
+      <div className="pt-4 w-full min-h-screen bg-[#F4F7FC]">
         <SecondPage />
       </div>
-      <div className="pt-4 lg:w-full w-full min-h-screen bg-[#F4F7FC]">
+      <div className="pt-4 w-full min-h-screen bg-[#F4F7FC]">
         <EventList />
       </div>
-      <div className="pt-4 lg:w-full w-full min-h-screen bg-[#F4F7FC]">
+      <div className="pt-4 w-full min-h-screen bg-[#F4F7FC]">
         <Faq />
       </div>
-            <Footer/>
-
+      <Footer />
     </div>
   );
 };

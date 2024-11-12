@@ -98,10 +98,7 @@ For support, email [rv504263@gmail.com] or open an issue in the repository.
 
 ## 📸 Screenshots
 ### Home Page
-![Home Page](public/images/image.png)
-
-### Event Creation
-![Create Event](./screenshots/create-event.png)
+![Home Page](public/images/Screenshot 2024-11-12 182828.png)
 
 
 

@@ -37,19 +37,19 @@ const SecondPage = () => {
                     </div>
                     <Swiper
                         modules={[Navigation, FreeMode, Pagination, Scrollbar, A11y]}
-                        spaceBetween={70}
+                        spaceBetween={25}
                         slidesPerView={1}
                         freeMode={true}
                         navigation={true}
                         breakpoints={{
-                            0: {
-                                slidesPerView: 4,
+                            1024: {
+                              slidesPerView: 4, // 3 slides per view on lg screens
                             },
-                        }}
-                        className="mySwiper px-4 w-[76vw] max-sm:w-[100vw]"
+                          }}
+                        className="mySwiper px-4 w-[76vw]max-sm:w-[90vw] "
                     >
-                        {[...Array(10)].map((_, index) => (
-                            <SwiperSlide key={index} className='border p-5 flex-col items-start justify-start py-5 lg:w-[17vw!important] lg:h-[40vh!important] border-zinc-400 w-[92vw!important] h-[45vh!important]' >
+                        {[...Array(8)].map((_, index) => (
+                            <SwiperSlide key={index} className='border shrink-0  lg:ml-5 px-5 flex-col items-start justify-start  lg:w-[22vw!important] lg:h-[60vh!important] border-zinc-400  h-[65vh!important]' >
                                 <div className='h-[25vh] object-cover object-center rounded-md overflow-hidden w-[40vh]'>
                                         <img className='object-cover h-full w-full object-center' src="https://images.unsplash.com/photo-1721332149274-586f2604884d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="Event Thumbnail" />
                                     </div>
