@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./Partials/Nav";
 import SecondPage from "./Partials/Home/SecondPage";
 import EventList from "./Partials/Home/EventList";
 import Faq from "./Partials/Home/Faq";
 import Footer from "./Footer";
+import { toast } from "react-toastify";
 
 
 const Home = () => {
+  useEffect(()=>{
+    toast.success("Welcome to Evently! Enjoy your stay", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  },[])
   return (
     <div className="min-h-screen overflow-x-hidden  relative">
 

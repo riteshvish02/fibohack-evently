@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './Components/Home';
 import Eventdets from './Components/Eventdets';
-import Userdeshboard from "./Components/Userdeshboard"
+import Userdeshboard from "./Components/Userdashboard"
 import Login from './Components/Login';
 import CreateAccount from './Components/CreateAccount';
 import CreateEvent from './Components/CreateEvent';
