@@ -21,14 +21,14 @@ const Home = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden relative">
-      <div className="relative w-full min-h-screen flex flex-col lg:flex-row   justify-between items-center">
+      <div  className="relative w-full min-h-screen flex flex-col lg:flex-row   justify-between items-center">
         <Nav />
 
         {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-200 via-purple-50 to-white clip-hero"></div>
+        <div style={{pointerEvents:"none"}} className="absolute  inset-0 bg-gradient-to-b from-purple-200 via-purple-50 to-white clip-hero"></div>
 
         {/* Content Section */}
-        <div className="relative    z-10 w-full lg:w-2/4  flex items-start justify-center flex-col lg:ml-24 p-6 lg:p-0">
+        <div className="relative pointer-events-none   z-10 w-full lg:w-2/4  flex items-start justify-center flex-col lg:ml-24 p-6 lg:p-0">
           <h1 className="text-4xl   mt-20 lg:text-6xl font-[ppbold] font-bold text-black mb-4 w-full   lg:w-[93%]">
             Host, Connect, Celebrate: Your Events, Our Platform!
           </h1>
@@ -46,7 +46,7 @@ const Home = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="relative w-full lg:w-1/2 flex flex-col gap-3 z-10 p-6 lg:pl-20">
+        <div className="relative pointer-events-none w-full lg:w-1/2 flex flex-col gap-3 z-10 p-6 lg:pl-20">
           {/* Image Row 1 */}
           <div className="flex flex-wrap lg:flex-nowrap gap-3">
             <div className="w-[45%] h-40 rounded-xl overflow-hidden">
