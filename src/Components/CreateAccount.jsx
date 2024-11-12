@@ -109,7 +109,7 @@ const UserRegister = () => {
     if(!user.loading){
       if(user.isAuthenticated){
         dispatch(isUser())
-        navigate('/events');
+        navigate('/userprofile');
       }
     }
   },[user.messageAuth,user.errorAuth,dispatch])
